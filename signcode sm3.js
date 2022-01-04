@@ -1746,6 +1746,7 @@ function guilv_encrypt(url_data) {
   var encrypt_option = {
     //通用 更改即可
 	//作者 By玄机 1198287349
+	  //以下算法并非最新版 需要最新版联系QQ
     timeDiff: 0,
     appkey: "gl_rn_a3e4588b077a",//appkey
     appSecret: "CC0E57E0986F1A5FB1BFAA5864788089",//盐
