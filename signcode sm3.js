@@ -1761,4 +1761,4 @@ function guilv_encrypt(url_data) {
   return resp.signcode
 }
 console.log(guilv_encrypt("uid=20599169&token=P1OfysVegwt4z9X3fjj-_g%3D%3D&branchNo=0&fundAccount=500090212&version=2.3.0&client=android&deviceId=dab4e4c5-14da-3d6e-a7d9-db8ed9357a99&timestamp=1636888662403&encrypt=1&brand=221&pageCount=30&currentPage=1&appkey=gl_rn_a3e4588b077a"))
-//console.log(guilv_encrypt("version=2.3.0&client=android&deviceId=dab4e4c5-14da-3d6e-a7d9-db8ed9357a99&timestamp=1636888609541&encrypt=1&brand=221&pageCount=30&currentPage=1&appkey=gl_rn_a3e4588b077a"))
+//console.log(guilv_encrypt("version=2.4.0&client=android&deviceId=dab4e4c5-14da-3d6e-a7d9-db8ed9357a99&timestamp=1636888609541&encrypt=1&brand=221&pageCount=30&currentPage=1&appkey=gl_rn_a3e4588b077a"))
