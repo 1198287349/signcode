@@ -203,7 +203,7 @@ function getSign(_0xf52d2e) {
   for (var _0xfa7f5b in _0x599185) {
     _0x5b927a = _0x5b927a + _0xfa7f5b + _0x599185[_0xfa7f5b];
   }
-  var _0x5b927a = '43C5CCA8824885209D8CF7EEBBAB39EC' + _0x5b927a + '43C5CCA8824885209D8CF7EEBBAB39EC';
+  var _0x5b927a = '43xxxEC' + _0x5b927a + '43xxxEC';
   _0x5b927a = _0x5b927a['toUpperCase']();
   return hex_md5(_0x5b927a);
 }
@@ -230,15 +230,7 @@ function glLogin(account, pwd) {
     "currentPage": "1",
 
 
-    // "appkey": "gl_rn_ef5075a71ee4",
-    // "client": "android",
-    // "deviceId": "8a805561-c04e-32b9-baba-ead5b53742dd",
-    // "encrypt": "1",
-    // "password": pwd,
-    // "timestamp": new Date().getTime() + "",
-    // // "timestamp": "1637056285883",
-    // "uinfo": account,
-    // "version": "2.3.0",
+
   }
   data["signcode"] = getSign(data);
   console.log("guilv算signcode by：玄机", data)
