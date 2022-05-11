@@ -222,7 +222,7 @@ function glLogin(account, pwd) {
     "deviceId": "0f00ca58-4e62-3704-bb9a-2ce04ce5025b",
     "encrypt": "1",
     "timestamp": "1637390634585",
-    "version": "2.3.0",
+    "version": "2.4.1",
     "branchNo": "0",
     "fundAccount": "500293125",
     "brand": "217",
