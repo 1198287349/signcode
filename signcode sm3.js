@@ -1749,7 +1749,7 @@ function guilv_encrypt(url_data) {
 	  //以下算法并非最新版 需要最新版联系QQ
     timeDiff: 0,
     appkey: "gl_rn_a3e4588b077a",//appkey
-    appSecret: "CC0E57E0986F1A5FB1BFAA5864788089",//盐
+    appSecret: "CCxxxx089",//盐
     saltkey: params.timestamp,
     mod1: 32,
     mod2: 33,
