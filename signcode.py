@@ -41,7 +41,6 @@ def get_md5():
     print(md5_string.center(50, "-"))
     return md5_string
 
-
 if __name__ == '__main__':
     get_md5()
 
