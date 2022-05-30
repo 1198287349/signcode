@@ -1,4 +1,4 @@
-params = {
+
     'uid': user_info['uid'],
     'token': user_info['token'],
     'branchNo': user_info['branch_no'],
@@ -25,7 +25,7 @@ params = {
     'expressCost': '0',
     'appkey': appkey,
     'queueCode': queue_code
-}
+
 encoded = urllib.parse.urlencode(params)
 params['__S__'] = js_context.call('get_signcode_with_s', encoded, user_info['code'])['__S__']
 api = "/api/transaction/purchasePlaceOrder.decryption"
