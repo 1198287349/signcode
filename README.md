@@ -5,7 +5,7 @@
 
 只出算法 不出成品 看清楚再联系我
 
-2022.05.39 19点29分 最新版signcode算法
+2022.05.30  最新版signcode算法
 
 # signcode2.4.0
 ![1](https://user-images.githubusercontent.com/38068634/168755086-f8a82aa3-8946-425c-9da6-55b218d1a3dd.png)
