@@ -4,7 +4,7 @@
 # -------------------------------------------------------------------------------
 # Name:         guilv
 # Author:       Android玄机
-# Date:         2022/05/18
+# Date:         2022/05/30
 # -------------------------------------------------------------------------------
 
 import hashlib
@@ -34,7 +34,7 @@ def sort_map():
 
 def get_md5():
     str_data = sort_map()
-    sort_string = "xxx" + str_data + "xxx"
+    sort_string = "xxxkey联系1198287349" + str_data + "xxxkey联系1198287349"
     up_string = sort_string.upper()
  
     md5_string = hashlib.md5(up_string.encode(encoding='UTF-8')).hexdigest()
