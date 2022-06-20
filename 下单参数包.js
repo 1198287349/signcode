@@ -23,7 +23,7 @@
     'insuranceCost': '0',
     'packCost': '0',
     'expressCost': '0',
-    'appkey': appkey,
+    'appkey':  appkey,
     'queueCode': queue_code
 
 encoded = urllib.parse.urlencode(params)
