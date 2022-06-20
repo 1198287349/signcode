@@ -4,7 +4,7 @@
 # -------------------------------------------------------------------------------
 # Name:         guilv
 # Author:       Android玄机
-# Date:         2022/05/30
+# Date:         2022/06/20
 # -------------------------------------------------------------------------------
 
 import hashlib
@@ -18,7 +18,7 @@ body = {
     "deviceId": "xxx--xxxx--xxxx",
     "encrypt": "1",
     "timestamp": "xxx",
-    "version": "2.4.1",
+    "version": "3.0.0",
     "branchNo": "0",
     "fundAccount": "xxx",
 }
