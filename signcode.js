@@ -1,27 +1,16 @@
-/**
- * Namespace for hashing and other cryptographic functions
- * Copyright (c) Andrew Valums
- * Licensed under the MIT license, http://valums.com/mit-license/
- */
+
 
  var V = V || {};
  V.Security = V.Security || {};
  
  ( function() {
-   // for faster access
+ 
    var S = V.Security;
  
-   /**
-    * The highest integer value a number can go to without losing precision.
-    */
+   
    S.maxExactInt = Math.pow( 2, 53 );
  
-   /**
-    * Converts string from internal UTF-16 to UTF-8
-    * and saves it using array of numbers (bytes), 0-255 per cell
-    * @param {String} str
-    * @return {Array}
-    */
+   
    S.toUtf8ByteArr = function( str ) {
      var arr = [],
        code;
@@ -29,14 +18,7 @@
      for( var i = 0;i < str.length;i++ ) {
        code = str.charCodeAt( i );
  
-       /*
-             Note that charCodeAt will always return a value that is less than 65,536.
-             This is because the higher code points are represented by a pair of (lower valued)
-             "surrogate" pseudo-characters which are used to comprise the real character.
-             Because of this, in order to examine or reproduce the full character for
-             individual characters of value 65,536 and above, for such characters,
-             it is necessary to retrieve not only charCodeAt(0), but also charCodeAt(1). 
-              */
+       
        if( 0xD800 <= code && code <= 0xDBFF ) {
          // UTF-16 high surrogate 
          var hi = code,
@@ -69,11 +51,7 @@
      return arr;
    };
  
-   /**
-    * Outputs 32 integer bits of a number in hex format.
-    * Preserves leading zeros.
-    * @param {Number} num
-    */
+   
    S.toHex32 = function( num ) {
      // if negative
      if( num & 0x80000000 ) {
@@ -91,11 +69,7 @@
      return str;
    };
  
-   /**
-    * Changes the order of 4 bytes in integer representation of number.
-    * From 1234 to 4321. 
-    * @param {Number} num Only 32 int bits are used.
-    */
+  
    S.reverseBytes = function( num ) {
      var res = 0;
      res += ( ( num >>> 24 ) & 0xff );
@@ -109,12 +83,7 @@
      return ( x << c ) | ( x >>> ( 32 - c ) );
    };
  
-   /**
-    * RSA Data Security, Inc. MD5 Message-Digest Algorithm
-    * http://tools.ietf.org/html/rfc1321
-    * http://en.wikipedia.org/wiki/MD5
-    * @param {String} message
-    */
+  
    S.md5 = function( message ) {
      // r specifies the per-round shift amounts
      var r = [ 7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22, 5, 9, 14, 20, 5, 9, 14, 20, 5, 9, 14, 20, 5, 9, 14, 20, 4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23, 6, 10, 15, 21, 6, 10, 15, 21, 6, 10, 15, 21, 6, 10, 15, 21 ];
@@ -218,26 +187,11 @@
  })();
  
  
- /*
-  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
-  * Digest Algorithm, as defined in RFC 1321.
-  * Version 2.2 Copyright (C) Paul Johnston 1999 - 2009
-  * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
-  * Distributed under the BSD License
-  * See http://pajhome.org.uk/crypt/md5 for more info.
-  */
- 
- /*
-  * Configurable variables. You may need to tweak these to be compatible with
-  * the server-side, but the defaults work in most cases.
-  */
+
  var hexcase = 0; /* hex output format. 0 - lowercase; 1 - uppercase        */
  var b64pad = ""; /* base-64 pad character. "=" for strict RFC compliance   */
  
- /*
-  * These are the functions you'll usually want to call
-  * They take string arguments and return either hex or base-64 encoded strings
-  */
+ 
  
  function hex_md5( s ) {
    return rstr2hex( rstr_md5( str2rstr_utf8( s ) ) );
@@ -263,25 +217,19 @@
    return rstr2any( rstr_hmac_md5( str2rstr_utf8( k ), str2rstr_utf8( d ) ), e );
  }
  
- /*
-  * Perform a simple self-test to see if the VM is working
-  */
+
  
  function md5_vm_test() {
    return hex_md5( "abc" ).toLowerCase() == "900150983cd24fb0d6963f7d28e17f72";
  }
  
- /*
-  * Calculate the MD5 of a raw string
-  */
+
  
  function rstr_md5( s ) {
    return binl2rstr( binl_md5( rstr2binl( s ), s.length * 8 ) );
  }
  
- /*
-  * Calculate the HMAC-MD5, of a key and some data (raw strings)
-  */
+
  
  function rstr_hmac_md5( key, data ) {
    var bkey = rstr2binl( key );
@@ -318,9 +266,7 @@
    return output;
  }
  
- /*
-  * Convert a raw string to a base-64 string
-  */
+ 
  
  function rstr2b64( input ) {
    try {
@@ -355,12 +301,7 @@
      dividend[ i ] = ( input.charCodeAt( i * 2 ) << 8 ) | input.charCodeAt( i * 2 + 1 );
    }
  
-   /*
-    * Repeatedly perform a long division. The binary array forms the dividend,
-    * the length of the encoding is the divisor. Once computed, the quotient
-    * forms the dividend for the next step. All remainders are stored for later
-    * use.
-    */
+ 
    var full_length = Math.ceil( input.length * 8 / ( Math.log( encoding.length ) / Math.log( 2 ) ) );
    var remainders = Array( full_length );
    for( j = 0;j < full_length;j++ ) {
@@ -743,12 +684,7 @@
  function md5( s ) {
    return hex( md51( s ) );
  }
- 
- /* this function is much faster,
- so if possible we use it. Some IEs
- are the only ones I know of that
- need the idiotic second function,
- generated by an if clause.  */
+
  
  function add32( a, b ) {
    return ( a + b ) & 0xFFFFFFFF;
@@ -892,22 +828,7 @@
      return state;
    }
  
-   /* there needs to be support for Unicode here,
-    * unless we pretend that we can redefine the MD-5
-    * algorithm for multi-byte characters (perhaps
-    * by adding every four 16-bit characters and
-    * shortening the sum to 32 bits). Otherwise
-    * I suggest performing MD-5 as if every character
-    * was two bytes--e.g., 0040 0025 = @%--but then
-    * how will an ordinary MD-5 sum be matched?
-    * There is no way to standardize text to something
-    * like UTF-8 before transformation; speed cost is
-    * utterly prohibitive. The JavaScript standard
-    * itself needs to look at this: it should start
-    * providing access to strings as preformed UTF-8
-    * 8-bit unsigned value arrays.
-    */
- 
+
    function md5blk( s ) { /* I figured global was faster.   */
      var md5blks = [],
        i; /* Andy King said do it this way. */
@@ -937,11 +858,7 @@
      return hex( md51( s ) );
    }
  
-   /* this function is much faster,
-     so if possible we use it. Some IEs
-     are the only ones I know of that
-     need the idiotic second function,
-     generated by an if clause.  */
+
  
    function add32( a, b ) {
      return ( a + b ) & 0xFFFFFFFF;
@@ -955,27 +872,7 @@
      }
    }
  })();
- 
- /* md5.js - MD5 Message-Digest
-  * Copyright (C) 1999,2002 Masanao Izumo <iz@onicos.co.jp>
-  * Version: 2.0.0
-  * LastModified: May 13 2002
-  *
-  * This program is free software.  You can redistribute it and/or modify
-  * it without any warranty.  This library calculates the MD5 based on RFC1321.
-  * See RFC1321 for more information and algorism.
-  */
- 
- /* Interface:
-  * md5_128bits = MD5_hash(data);
-  * md5_hexstr = MD5_hexhash(data);
-  */
- 
- /* ChangeLog
-  * 2002/05/13: Version 2.0.0 released
-  * NOTICE: API is changed.
-  * 2002/04/15: Bug fix about MD5 length.
-  */
+
  
  
  //    md5_T[i] = parseInt(Math.abs(Math.sin(i)) * 4294967296.0);
