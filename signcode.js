@@ -1044,7 +1044,6 @@ function o(t) {
     }
     return f
 }
-
 function get_signcode(url_data) {
     data = {}
     var arr = url_data.split('&');
