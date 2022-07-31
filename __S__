@@ -1,8 +1,8 @@
 
 public static void main(String[] args) {
-        String json = "{\"orderType\":\"11\",\"shoppingScore\":\"\",\"gpFundCode\":\"\",\"deviceId\":\"\",\"paymentAmount\":\"\",\"addressId\":\"\",\"uid\":\"\",\"score\":\"0\",\"payType\":\"-128\",\"usePlusPrice\":\"0\",\"encrypt\":\"1\",\"erpCode\":\"\",\"client\":\"android\",\"timestamp\":\"\",\"amount\":\"2\",\"wineType\":\"0\",\"version\":\"3.2.0\",\"token\":\"\",\"insuranceCost\":\"0\",\"fundAccount\":\"\",\"productAmount\":\"\",\"__S__\":\"__XXXXXXXXXX__\",\"packCost\":\"0\",\"expressCost\":\"0\",\"appkey\":\"\",\"branchNo\":\"0\"}";
+        String json = ""}";
         for (int i = 0; i < 10; i++) { 
             long l = System.currentTimeMillis();
             System.out.println(signWithS(JSONUtil.toBean(json, Map.class), "xxxx"));
-            System.out.println("耗时:" + (System.currentTimeMillis() - l +"ms"));
+          
         }
