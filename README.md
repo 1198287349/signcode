@@ -9,6 +9,9 @@
 
 2022-06-23  最新版3.1.0贵旅signcode算法
 
+# __S__算法
+
+![__S__](https://user-images.githubusercontent.com/38068634/182024535-e8be523a-71be-41df-9f2e-1537b38be0e0.png)
 
 
 
