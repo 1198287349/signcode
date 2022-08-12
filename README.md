@@ -7,7 +7,7 @@
 
 出贵旅优品，安心e购，空港商城，黄果树加密算法源码
 
-2022-06-23  最新版3.1.0贵旅signcode算法
+2022-08-12  最新版3.2.0贵旅signcode算法
 
 # __S__算法
 
@@ -17,13 +17,12 @@
 
 # Bug Fixes 3.2.0
 
-
-# signcode2.4.0
-![1](https://user-images.githubusercontent.com/38068634/168755086-f8a82aa3-8946-425c-9da6-55b218d1a3dd.png)
-
-# signcode2.4.1
-![2](https://user-images.githubusercontent.com/38068634/168755308-e4903ca8-91ef-4ec7-abed-0dbc847b01a0.png)
+# 3.2.0 signcode算法
+![QQ截图20220812202936](https://user-images.githubusercontent.com/38068634/184354269-b9cff0bc-f5f1-466a-96d7-561a445e1411.png)
 
 
-# signcode3.0.0
-![3 0 0](https://user-images.githubusercontent.com/38068634/174586814-36a571c0-720b-4b74-90b4-55d8543f4092.png)
+# 20220812-20点27分
+![20220812](https://user-images.githubusercontent.com/38068634/184353884-13bb7be0-4209-4244-9f81-771f78611fb4.png)
+
+![QQ截图20220812202752![QQ截图20220812202802](https://user-images.githubusercontent.com/38068634/184354002-de586dce-8c95-486e-8aa2-f779d033b270.png)
+](https://user-images.githubusercontent.com/38068634/184353985-17f4c137-a34e-4bee-9151-87d2b6590dd4.png)
